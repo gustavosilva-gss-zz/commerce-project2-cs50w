@@ -1,0 +1,31 @@
+{% extends "auctions/layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    New Listing
+{% endblock %}
+
+{% block additional_links %}
+    <link rel="stylesheet" href="{% static 'auctions/new_style.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+    <form action="{% url 'new' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-field">Title: {{ form.title }}*</div>
+        <div class="form-field">Description:<br>{{ form.description }}*</div>
+        <div class="form-field">Minimum bid: {{ form.min_bid }}*</div>
+        <div class="form-field">Category: {{ form.category }}*</div>
+        <div class="form-field">Image Url: {{ form.image_url }}</div>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

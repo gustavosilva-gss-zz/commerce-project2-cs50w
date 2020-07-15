@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>id</th>
+        <th>content</th>
+        <th>user_id</th>
+    </tr>
+    {% for comment in comments %}
+        <tr>
+            <td><a href="/admin/auctions/bid/{{ bid.id }}/change">{{ comment.id }}</a></td>
+            <td>{{ comment.content }}</td>
+            <td><a href="/admin/auctions/user/{{ bid.user.id }}/change">{{ comment.user.id }}</a></td>
+        </tr>
+    {% endfor %}
+</table>
