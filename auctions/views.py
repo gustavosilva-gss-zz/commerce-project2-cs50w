@@ -242,6 +242,13 @@ def watchlist(request):
         "listings": listings
     }) 
 
+def categories(request):
+    categories = Category.objects.order_by('title')
+
+    return render(request, "auctions/categories.html", {
+        "categories": categories
+    })
+
 def category(request, id):
     category = Category.objects.get(pk=id)
 

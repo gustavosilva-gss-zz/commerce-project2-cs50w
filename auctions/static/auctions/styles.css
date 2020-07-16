@@ -6,6 +6,16 @@ img {
     width: 30vw;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
 .listing-card {
     margin: 5px;
     padding: 0px;
