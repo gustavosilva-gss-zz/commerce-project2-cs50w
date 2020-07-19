@@ -33,7 +33,7 @@ This page is reached by going to `/listing/<listing_id>`, there the user will se
 Users can see the listing they added to their watchlist by clicking in the "watchlist" button on the navigation bar (or go to route `/watchlist`). They can click on any of the page's listings, to see their respective listing.
 
 #### **Categories**
-TODO
+If the users go to `/categories` they get a list of all the categories, if they coose one, they can see all the listings for that category (same can be made through clicking on the category in the listing page).
 
 #### **Django Admin Interface**
 Going to `/admin`, the administrators can view, add, edit, and delete:
@@ -43,3 +43,7 @@ Going to `/admin`, the administrators can view, add, edit, and delete:
 * Categories
 * Users
 * Watchlists
+
+#### **External Links**
+Video demonstration: https://youtu.be/q89uIgyHz1M
+Website hosted in Heroku: https://commerce-project2-cs50w.herokuapp.com
